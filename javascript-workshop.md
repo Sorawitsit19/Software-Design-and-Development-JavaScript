@@ -236,7 +236,7 @@ let person = {
 </html>
 **รูปผลการทดลอง**
 ![รูปผลการทดลองที่ 2.1](images/image.png)
-c:\Users\admin\Pictures\Screenshots\สกรีนช็อต 2026-02-25 155453.png
+
 
 ### 2.2 การดำเนินการทางคณิตศาสตร์
 
@@ -288,7 +288,50 @@ number /= 2;          // เท่ากับ number = number / 2
 ### บันทึกผลการทดลอง 2.2
 ```html
 [บันทึกโค้ด ที่นี่]
-```
+```<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมคำนวณ</title>
+</head>
+<body>
+    <h2>1. คำนวณคะแนนเฉลี่ย 3 วิชา</h2>
+    <div id="averageResult"></div>
+
+    <h2>2. คำนวณราคาสินค้ารวม VAT 7%</h2>
+    <div id="vatResult"></div>
+
+    <script>
+        // คำนวณคะแนนเฉลี่ย
+        let score1 = 80;
+        let score2 = 75;
+        let score3 = 90;
+
+        let average = (score1 + score2 + score3) / 3;
+
+        document.getElementById("averageResult").innerHTML = 
+        "คะแนนวิชาที่ 1 : " +score1 + "<br>" +
+        "คะแนนวิชาที่ 2 : " +score2 + "<br>" +
+        "คะแนนวิชาที่ 3 : " +score3 + "<br>" +
+        "คะแนนเฉลี่ย : " + average.toFixed(2);
+
+        // คำนวณราคาสินค้ารวม VAT
+        let productName = "a110 alpine";
+        let productPrice = 2700000;
+
+        let vat = productPrice * 0.07;
+        let totalPrice = productPrice + vat;
+
+        document.getElementById("vatResult").innerHTML =
+        "ชื่อสินค้า : " + productName + "<br>" +
+        "ราคาสินค้า : " + productPrice.toLocaleString() + " บาท<br>" +
+        "VAT 7% : " + vat.toLocaleString() + " บาท<br>" +
+        "รวมทั้งหมด : " + totalPrice.toLocaleString() + " บาท"
+    </script>
+    
+</body>
+</html>
 **รูปผลการทดลอง**
 ![รูปผลการทดลองที่ 2.2](images/image.png)
 
