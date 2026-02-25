@@ -76,10 +76,62 @@ JavaScript สามารถเพิ่มลงในเว็บเพจไ
    - มีปุ่มเมื่อคลิกแล้วจะแสดงข้อความที่กรอกในช่องข้อความ  (สามารถใช้ document.getElementById('id ของ textbox').value เพื่อดึงข้อมูลในช่อง)
 ### บันทึกผลการทดลอง 
 ```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฝึกปฏิบัติที่ 1 - JavaScript</title>
+</head>
+<body>
+
+    <h2>การใช้งาน JavaScript เบื้องต้น</h2>
+
+    <button onclick="alert('ชื่อนักศึกษา: [ใส่ชื่อ-นามสกุลของคุณ]')">ปุ่มที่ 1 (แสดงชื่อ)</button>
+
+    <button id="btnDate">ปุ่มที่ 2 (แสดงวันที่)</button>
+
+    <button onclick="showTime()">ปุ่มที่ 3 (แสดงเวลา)</button>
+
+    <hr>
+
+    <h3>กรอกข้อความที่นี่:</h3>
+    <input type="text" id="userInput" placeholder="พิมพ์อะไรก็ได้...">
+    <button id="btnShowText">แสดงข้อความ</button>
+
+    <script>
+        document.getElementById('btnDate').onclick = function() {
+            const today = new Date();
+            alert('วันที่ปัจจุบันคือ: ' + today.toLocaleDateString('th-TH'));
+        };
+        
+        document.getElementById('btnShowText').onclick = function() {
+            const message = document.getElementById('userInput').value;
+            if(message === "") {
+                alert('กรุณากรอกข้อความก่อนกดปุ่มครับ');
+            } else {
+                alert('ข้อความที่คุณกรอกคือ: ' + message);
+            }
+        };
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
 [บันทึกโค้ด ที่นี่]
 ```
+
+function showTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('th-TH');
+    alert('เวลาปัจจุบันคือ: ' + timeString);
+}
+
 **รูปผลการทดลอง**
 ![รูปผลการทดลองที่ 1](images/image.png)
+![alt text](<สกรีนช็อต 2026-02-25 152732.png>)
+
 
 ## การทดลองที่ 2: พื้นฐาน JavaScript
 ### 2.1 การประกาศตัวแปรและชนิดข้อมูล
