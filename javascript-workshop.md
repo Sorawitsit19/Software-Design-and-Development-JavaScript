@@ -188,10 +188,55 @@ let person = {
 ### บันทึกผลการทดลอง 2.1
 ```html
 [บันทึกโค้ด ที่นี่]
-```
+```<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ข้อมูลนักศึกษา</title>
+</head>
+<body>
+
+    <h2>ข้อมูลคะแนนสอบ</h2>
+    <div id="scoreResult"></div>
+
+    <h2>ข้อมูลนักศึกษา (Object)</h2>
+    <div id="studentResult"></div>
+
+    <script>
+        //  ตัวแปร 
+        const studentId = "68030288";
+        const studentName = "sorawit sittirak";
+        let midtermScore = 35;
+        let finalScore = 40;
+
+        // แสดงผลคะแนนสอบ
+        document.getElementById("scoreResult").innerHTML =
+            "รหัสนักศึกษา: " + studentId + "<br>" +
+            "ชื่อนักศึกษา: " + studentName + "<br>" +
+            "คะแนนกลางภาค: " + midtermScore + "<br>" +
+            "คะแนนปลายภาค: " + finalScore;
+
+        //  Object 
+        const student = {
+            studentId: "68030288",
+            name: "sorawit sittirak",
+            major: "เทคโนโลยีคอมพิวเตอร์",
+            gpa: 3.85
+        };
+
+        //  Object
+        document.getElementById("studentResult").innerHTML =
+            "รหัสนักศึกษา: " + student.studentId + "<br>" +
+            "ชื่อ: " + student.name + "<br>" +
+            "สาขาวิชา: " + student.major + "<br>" +
+            "เกรดเฉลี่ย: " + student.gpa;
+    </script>
+
+</body>
+</html>
 **รูปผลการทดลอง**
 ![รูปผลการทดลองที่ 2.1](images/image.png)
-
+c:\Users\admin\Pictures\Screenshots\สกรีนช็อต 2026-02-25 155453.png
 
 ### 2.2 การดำเนินการทางคณิตศาสตร์
 
